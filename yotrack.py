@@ -81,7 +81,7 @@ def get_threat_intelligence(ip):
     """Get threat intelligence for IP"""
     try:
         # Using AbuseIPDB API (free tier)
-        api_key = "6d5ff08a8ca45ac69bb3d7a3cbd3bef613ca80ae7934679668b4cf974ccdf1922e04913719276dd5"  # Replace with actual API key
+        api_key = "your-api-key"  # Replace with actual API key
         url = f"https://api.abuseipdb.com/api/v2/check?ipAddress={ip}&maxAgeInDays=90"
         headers = {
             'Key': api_key,
@@ -118,7 +118,7 @@ def get_additional_ip_info(ip):
     
     # Get info from ipgeolocation.io
     try:
-        api_key = "0c0b942443764016b0080638f5f3e83f"  # Replace with actual API key
+        api_key = "your-api-key"  # Replace with actual API key
         response = requests.get(f"https://api.ipgeolocation.io/ipgeo?apiKey={api_key}&ip={ip}", 
                               headers=get_random_headers(), timeout=5)
         if response.status_code == 200:
